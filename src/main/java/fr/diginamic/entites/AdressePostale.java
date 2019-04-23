@@ -9,6 +9,8 @@ public class AdressePostale {
 	public int codePostal;
 	public String ville;
 
+	public static int nbDepartement = 102;
+
 	public AdressePostale(int numeroRue, String nomRue, int codePostal, String ville) {
 
 		this.numeroRue = numeroRue;
