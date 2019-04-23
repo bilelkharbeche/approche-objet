@@ -26,4 +26,39 @@ public class Client {
 
 	}
 
+	public void AfficheNom() {
+
+		System.out.println(nom.toUpperCase() + " " + prenom);
+	}
+
+	public void ModifNom(String nom) {
+
+		this.nom = nom;
+	}
+
+	public void ModifPrenom(String prenom) {
+
+		this.prenom = prenom;
+	}
+
+	public void ModifCompte(int numeroCompte) {
+
+		this.numeroCompte = numeroCompte;
+	}
+
+	public String RetourneNom() {
+
+		return nom;
+	}
+
+	public String RetournePrenom() {
+
+		return prenom;
+	}
+
+	public int RetourneCompte() {
+
+		return numeroCompte;
+	}
+
 }
