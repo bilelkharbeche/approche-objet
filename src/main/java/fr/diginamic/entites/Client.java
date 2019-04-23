@@ -5,14 +5,25 @@ public class Client {
 	public int numeroCompte;
 	public String nom;
 	public String prenom;
+	public AdressePostale adresse;
 
-	public Client(int compte, String name, String nickname) {
+	public Client(int numeroCompte, String nom, String prenom) {
 
-		numeroCompte = compte;
-		nom = name;
-		prenom = nickname;
+		this.numeroCompte = numeroCompte;
+		this.nom = nom;
+		this.prenom = prenom;
 
 		System.out.println("Nom " + nom + " Prénom " + prenom + " Numéro de compte " + numeroCompte);
+	}
+
+	public Client(int numeroCompte, String nom, String prenom, AdressePostale adresse) {
+
+		this(numeroCompte, nom, prenom);
+		this.adresse = adresse;
+
+		System.out.println(
+				"Nom " + nom + " Prénom " + prenom + " Numéro de compte " + numeroCompte + " Adresse " + adresse);
+
 	}
 
 }
