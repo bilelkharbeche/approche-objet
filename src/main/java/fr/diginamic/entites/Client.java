@@ -2,10 +2,10 @@ package fr.diginamic.entites;
 
 public class Client {
 
-	public int numeroCompte;
-	public String nom;
-	public String prenom;
-	public AdressePostale adresse;
+	private int numeroCompte;
+	private String nom;
+	private String prenom;
+	private AdressePostale adresse;
 
 	public Client(int numeroCompte, String nom, String prenom) {
 
@@ -26,39 +26,35 @@ public class Client {
 
 	}
 
-	public void AfficheNom() {
-
-		System.out.println(nom.toUpperCase() + " " + prenom);
-	}
-
-	public void ModifNom(String nom) {
-
-		this.nom = nom;
-	}
-
-	public void ModifPrenom(String prenom) {
-
-		this.prenom = prenom;
-	}
-
-	public void ModifCompte(int numeroCompte) {
-
-		this.numeroCompte = numeroCompte;
-	}
-
-	public String RetourneNom() {
-
-		return nom;
-	}
-
-	public String RetournePrenom() {
-
-		return prenom;
-	}
-
-	public int RetourneCompte() {
-
+	public int getNumeroCompte() {
 		return numeroCompte;
 	}
 
+	public void setNumeroCompte(int numeroCompte) {
+		this.numeroCompte = numeroCompte;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public AdressePostale getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(AdressePostale adresse) {
+		this.adresse = adresse;
+	}
 }

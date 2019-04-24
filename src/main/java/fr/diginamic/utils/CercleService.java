@@ -6,7 +6,7 @@ public class CercleService {
 
 	public static void doubler(Cercle cercle) {
 
-		cercle.rayon = cercle.rayon * 2;
+		cercle.setRayon(cercle.getRayon() * 2);
 
 	}
 

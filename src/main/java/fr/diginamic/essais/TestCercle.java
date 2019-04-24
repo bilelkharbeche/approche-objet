@@ -22,7 +22,7 @@ public class TestCercle {
 		System.out.println(cercle.getPerim() + cercle.getAir());
 
 		CercleService.doubler(c3);
-		System.out.println(c3.rayon);
+		System.out.println(c3.getRayon());
 
 	}
 

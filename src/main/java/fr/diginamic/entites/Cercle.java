@@ -2,7 +2,7 @@ package fr.diginamic.entites;
 
 public class Cercle {
 
-	public double rayon;
+	private double rayon;
 
 	public Cercle(double rayon) {
 
@@ -17,6 +17,14 @@ public class Cercle {
 	public double getAir() {
 
 		return Math.PI * rayon * rayon;
+	}
+
+	public double getRayon() {
+		return rayon;
+	}
+
+	public void setRayon(double rayon) {
+		this.rayon = rayon;
 	}
 
 }

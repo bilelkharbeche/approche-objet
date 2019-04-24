@@ -9,21 +9,21 @@ public class TestPersonne {
 
 		Personne personne = new Personne();
 
-		personne.nom = "KHARBECHE";
-		personne.prenom = "Bilel";
+		personne.setNom("KHARBECHE");
+		personne.setPrenom("Bilel");
 
 		personne.adressePostale = new AdressePostale(13, "rue des goulottes", 71210, "Montchanin");
 
 		AdressePostale adresse = new AdressePostale(13, "impasse des fauvettes", 71200, "Le Creusot");
 		Personne personne2 = new Personne();
 
-		adresse.numeroRue = 13;
-		adresse.nomRue = "impasse des fauvettes";
-		adresse.codePostal = 71200;
-		adresse.ville = "Le Creusot";
+		adresse.setNumeroRue(13);
+		adresse.setNomRue("impasse des fauvettes");
+		adresse.setCodePostal(71200);
+		adresse.setVille("Le Creusot");
 
-		personne2.nom = "Kharbeche";
-		personne2.prenom = "Bilel";
+		personne2.setNom("Kharbeche");
+		personne2.setPrenom("Bilel");
 		personne2.adressePostale = adresse;
 
 	}
