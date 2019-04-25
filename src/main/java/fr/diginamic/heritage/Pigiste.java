@@ -13,6 +13,13 @@ public class Pigiste extends Intervenant {
 		this.montantJournalier = montantJournalier;
 	}
 
+	public void afficherDonnees() {
+
+		super.afficherDonnees();
+		System.out.println("Statut : Pigiste");
+
+	}
+
 	@Override
 	public double getSalaire() {
 		// TODO Auto-generated method stub

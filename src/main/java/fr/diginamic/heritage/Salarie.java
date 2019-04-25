@@ -11,6 +11,13 @@ public class Salarie extends Intervenant {
 		this.salaire = salaire;
 	}
 
+	public void afficherDonnees() {
+
+		super.afficherDonnees();
+		System.out.println("Statut : Salarié \n");
+
+	}
+
 	@Override
 	public double getSalaire() {
 
