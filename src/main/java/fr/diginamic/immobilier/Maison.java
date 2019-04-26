@@ -1,6 +1,8 @@
 package fr.diginamic.immobilier;
 
-public class Maison {
+import fr.diginamic.tp6.ISurface;
+
+public class Maison implements ISurface {
 
 	private Piece[] array;
 	// private int indice = 0;
@@ -24,7 +26,7 @@ public class Maison {
 
 	}
 
-	public double superficieTotale() {
+	public double calculerSurface() {
 
 		double superficieTotale = 0;
 

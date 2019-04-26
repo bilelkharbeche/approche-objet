@@ -18,7 +18,7 @@ public class TestMaison {
 		m1.ajouterPiece(wc1);
 
 		System.out.println(m1.superficieEtage(2));
-		System.out.println(m1.superficieTotale());
+		System.out.println(m1.calculerSurface());
 		System.out.println(m1.superficieType("Chambre"));
 		System.out.println(m1.nbPiece("Salon"));
 
