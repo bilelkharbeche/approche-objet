@@ -3,8 +3,13 @@
  */
 package fr.diginamic.sets;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
+
+import fr.diginamic.tri.ComparatorHabitant;
+import fr.diginamic.tri.ComparatorPibHabitant;
 
 /**
  * @author KHARBECHE Bilel
@@ -18,6 +23,7 @@ public class TestPays {
 	public static void main(String[] args) {
 
 		Set<Pays> pays = new HashSet();
+		ArrayList<Pays> py = new ArrayList();
 
 		Pays usa = new Pays("Usa", 325_000_000, 57_638);
 		Pays france = new Pays("France", 67_000_000, 43_551);
@@ -39,6 +45,20 @@ public class TestPays {
 		pays.add(russie);
 		pays.add(inde);
 
+		py.addAll(pays);
+		// Collections.sort(py);
+
+		Comparator c = new ComparatorHabitant();
+		Comparator cpib = new ComparatorPibHabitant();
+
+		// py.sort(c);
+		py.sort(cpib);
+
+		for (Pays test : py) {
+			System.out.println(test.getPays());
+		}
+		System.out.println("\n");
+
 		Pays pSup = null;
 		double pib = pays.iterator().next().getPib();
 		double pibTot = pays.iterator().next().getPib() * pays.iterator().next().getNbHab();
@@ -50,7 +70,7 @@ public class TestPays {
 				nomP = pibH.getPays();
 			}
 		}
-		// System.out.println(nomP); // PIB/hab le plus grand
+		System.out.println(nomP); // PIB/hab le plus grand
 
 		for (Pays pibT : pays) {
 			if (pibTot > pibT.getNbHab() * pibT.getPib()) {
@@ -58,7 +78,7 @@ public class TestPays {
 				nomP = pibT.getPays();
 			}
 		}
-		// System.out.println(nomP);
+		System.out.println(nomP);
 
 		pibTot = pays.iterator().next().getPib() * pays.iterator().next().getNbHab();
 
@@ -70,13 +90,14 @@ public class TestPays {
 				pSup = pibT;
 			}
 		}
-		// System.out.println(nomP);
+		System.out.println(nomP);
 
 		pays.remove(pSup);
 
 		for (Pays affPay : pays) {
-			System.out.println("\n" + affPay.getPays() + " nombre d'habitant : " + affPay.getNbHab() + " PIB totale : "
-					+ (affPay.getPib() * affPay.getNbHab()));
+			// System.out.println("\n" + affPay.getPays() + " nombre d'habitant
+			// : " + affPay.getNbHab() + " PIB totale : "
+			// + (affPay.getPib() * affPay.getNbHab()));
 		}
 	}
 

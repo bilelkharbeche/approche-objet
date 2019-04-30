@@ -7,11 +7,24 @@ package fr.diginamic.sets;
  * @author KHARBECHE Bilel
  *
  */
-public class Pays {
+public class Pays implements Comparable<Pays> {
 
 	private String pays;
 	private int nbHab;
 	private int pib;
+
+	@Override
+	public int compareTo(Pays pays) {
+		// int result = this.pays.compareTo(pays.getPays());
+		// return result;
+
+		if (pays.getPib() < this.pib) {
+			return -1;
+		} else if (pays.getPib() == this.pib) {
+			return 0;
+		}
+		return 1;
+	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -59,5 +72,4 @@ public class Pays {
 	public void setPib(int pib) {
 		this.pib = pib;
 	}
-
 }
